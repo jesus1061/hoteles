@@ -1,0 +1,19 @@
+{
+  "name": "hoteles",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto en nodejs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus1061/hoteles.git"
+  },
+  "author": "jesus david duran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesus1061/hoteles/issues"
+  },
+  "homepage": "https://github.com/jesus1061/hoteles#readme"
+}
