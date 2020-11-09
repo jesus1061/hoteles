@@ -10,6 +10,7 @@ body{
 	background-color: rgb(255 , 255 , 255);
 
 }
+
 #section2{
 	margin-top: 100px;
 }
@@ -137,22 +138,18 @@ form , iframe{
 		font-weight: 900;
 	}
 	.card-hotel{
-		flex: 1 150px;
-		padding: 2px 2px 2px 5px;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		flex: 1 200px;
+		margin-top: 10px;
 
 	}
 	.card-hotel p{
 		text-align: left;
 	}
 	.card-hotel h4{
-		text-align: center;
+		
 		font-family: 'Bitter', serif;
 	}
-	.hotel-datos{
-		padding: 2px;
-	}
+	
 	.hotel-datos svg{
 		color: orange;
 		position: relative;
@@ -168,6 +165,7 @@ form , iframe{
 	.btn-reserva{
 		width: 100%;
 		background-color:  rgba(0,56,147,1);
+		border-radius:0px;
 
 	}
 	.btn-reserva:hover{
@@ -180,4 +178,21 @@ form , iframe{
 		background: linear-gradient(to right, rgba(252,209,22,1) 0%, rgba(252,209,22,1) 29%, rgba(0,56,147,1) 55%, rgba(206,17,38,1) 82%, rgba(206,17,38,1) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcd116', endColorstr='#ce1126', GradientType=1 );
 		font-weight: 900;
+	}
+
+
+#section-nosotros{
+	text-align: center;
+}
+
+	#section-nosotros h1{
+		color:rgba(0,56,147,1)
+	}
+
+	.padding-footer-icon , .oi-plus{
+		padding-right: 10px;
+	}
+	.oi-plus{
+		position: relative;
+		top: 2px;
 	}
