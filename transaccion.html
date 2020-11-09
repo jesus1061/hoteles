@@ -8,9 +8,9 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
 
-  <title>About</title>
+  <title>Reservación</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
@@ -27,15 +27,15 @@
         <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="about.html" id="active">Nosotros</a>
+        <a class="nav-link" href="about.html" >Nosotros</a>
       </li>
-       <li class="nav-item ">
+      <li class="nav-item ">
         <a class="nav-link" href="price.html">Precios</a>
-    </li>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="contact.html">Contactanos</a>
       </li>
-     
+      
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -59,34 +59,107 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Nosotros</li>
+           <li class="breadcrumb-item" aria-current="page">Reservación</li>
+          <li class="breadcrumb-item active" class="status-reserva-active" aria-current="page">Datos de reservación</li>
         </ol>
       </nav>
       <hr>
     </div>
 
-    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" id="section-nosotros">
+    <div class="col-xl-12 " >
+      <div class="alert alert-success alert-dismissible fade show status-reserva" style="display: none" role="alert" >
+  <strong>Reservación realizada correctamente</strong> Gracias por utilizar nuestros servicios.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+      </div>
+      
 
+    </div>
 
-     <h1>Quienes somos</h1>
-     <hr>
-     <p style="text-align: justify; font-weight: 900;">Hotelescol.com es una agencia hotelera y turistica de origen colombiano con sede principal en santiago de cali, contamos con mas de 10 años trabajando  en el sector hotelero y turistico, proveemos servicios de reservación de habitaciones en los mejores hoteles de nuestra región colombiana, ademas de reservar hoteles, tenemos paquetes turisticos creados con el proposito claro de brindarles a nuestros clientes la posibilidad de viajar a diferentes partes del mundo, todo esto con los mejores precios y al mejor servicio, todo esto hace que nos poscisionemos como numero uno en el sector hotelero y turistico ven y has tu reservación.</p>
-     <button type="button" class="btn btn-primary" id="btn">Volver</button>
-<br>
-<br>
-   </div>
-   <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" style="display: flex; align-items: center;">
-     <img src="https://www.reviewpro.com/wp-content/uploads/2018/10/HD_Hotel.jpg" alt="imagen de hotel" width="100%">
-   </div>
+    
 
- </div>
+  </div>
+
+  <div class="d-flex flex-wrap">
+
+    <form action=" " class="col-xl-12" id="formulario-reserva">
+
+    </form>  
+
+  </div>
+
+  <hr>
+
+  <div class="d-flex justify-content-center">
+    <div class="card" >
+      <div class="card-header" style="background-color:rgba(0,56,147,1); color:white">
+        Tarjetas aceptadas <span class="oi oi-credit-card"></span>
+        
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Tarjeta de Credito</li>
+        <li class="list-group-item">Tarjeta de Debito</li>
+        <li class="list-group-item">Tarjeta VIP</li>
+      </ul>
+      
+    </div>
+    
+
+  </div>
 </div>
 
 <footer id="footer">
  <div class="d-flex flex-wrap " >
-  <form class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12" id="formulario-reserva">
+  <form class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
 
-    
+    <div class="form-row ">
+      <div class="form-group col-xl-12 col-lg-6 col-md-12 col-sm-6">
+        <label for="nombres">Nombre completos*</label>
+        <input type="text" id="nombres" placeholder="Nombres completos" class="form-control">
+      </div>
+      <div class="form-group col-xl-12 col-lg-6 col-md-12 col-sm-6">
+        <label for="correo">Correo electronico*</label>
+        <input type="email" id="correo" placeholder="Correo electronico" class="form-control">
+      </div>
+      <div class="form-group col-xl-12">
+        <label for="mensaje">Mensaje*</label>
+        <textarea name="" id="mensaje"  rows="2" class="form-control"></textarea>
+      </div>
+      <div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6">
+        <label for="departamento">Departamento*</label>
+        <select name="" id="departamento" class="form-control">
+          <option value="">Departamento</option>
+          <option value="">Valle</option>
+          <option value="">Cauca</option>
+        </select>
+      </div>
+      <div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6">
+        <label for="municipio">Municipio*</label>
+        <select name="" id="municipio" class="form-control">
+          <option value="">Municipio</option>
+          <option value="">Cali</option>
+          <option value="">Popayan</option>
+        </select>
+      </div>
+      <div class="form-group col-xl-12">
+        <label for="direccion">Dirección*</label>
+        <input type="text" placeholder="Dirección" class="form-control" id="direccion">
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="gridCheck">
+          <label for="gridCheck" class="form-check-label">Quiero que me contacten</label>
+        </div>
+      </div>
+      <div class="form-group col-xl-12" style="text-align: center;">
+
+       <input type="submit"  class="btn btn-primary" value="Enviar" style="background-color: rgba(0,56,147,1); border: none">
+     </div>
+   </div>
 
  </form>
  <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 col-12" style="display: flex; align-items: center;">
@@ -95,8 +168,8 @@
 </div>
 <div class="d-flex flex-wrap ">
   <div class="d-flex flex-column align-items-start col-xl-4 col-lg-4 col-md-4 col-ms-4 col-12 footer-secction">
-  <p>  <a href="https://www.facebook.com" class="link-social">Facebook</a></p>
-   <p> <a href="https://www.youtube.com" class="link-social">Youtube</a></p>
+    <p>  <a href="https://www.facebook.com" class="link-social">Facebook</a></p>
+    <p> <a href="https://www.youtube.com" class="link-social">Youtube</a></p>
     <p><a href="https://www.imstagram.com" class="link-social">Instagram</a></p>
     <p><a href="https://www.twitter.com" class="link-social">Twitter</a></p>
     <p><a href="https://www.google.com" class="link-social">Google+</a></p>
@@ -111,7 +184,7 @@
   </div>
   <div class="d-flex flex-column align-items-end col-xl-4 col-lg-4 col-md-4 col-ms-4 col-12 footer-secction">
     <p><a href="#jumbotron" class="link-mapa">Nosotros</a></p>
-   <p> <a href="#section-ayuda" class="link-mapa">ayuda</a></p>
+    <p> <a href="#section-ayuda" class="link-mapa">ayuda</a></p>
     <p><a href="https://www.imstagram.com" class="link-mapa">Terminos y condiciones</a></p>
 
     <p><a href="#footer" class="link-mapa">Contactos</a></p>
@@ -127,19 +200,23 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function(){
-    $(".jumbotron").css("background-image","url(https://www.xtrafondos.com/descargar.php?id=2842&resolucion=2560x1600)");
-    $(".jumbotron").css("background-size","cover");
-    $("#active").css("color","green");
-    $(".dropdown-menu a").mouseover(function(){
-      $(this).css("color","white");
-    });
-    $(".dropdown-menu a").mouseout(function(){
-      $(this).css("color","#7b1fa2");
 
 
-    });
+
+   $("#formulario-reserva").load('datos-basicos-reserva.html');
+   $(".jumbotron").css("background-image","url(https://www.xtrafondos.com/descargar.php?id=2842&resolucion=2560x1600)");
+   $(".jumbotron").css("background-size","cover");
+   $("#active").css("color","green");
+   $(".dropdown-menu a").mouseover(function(){
+    $(this).css("color","white");
+  });
+   $(".dropdown-menu a").mouseout(function(){
+    $(this).css("color","#7b1fa2");
+
 
   });
+
+ });
 </script>
 
 

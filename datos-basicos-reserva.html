@@ -1,0 +1,59 @@
+<div class="form-row">
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombres" id="nombre">
+  </div>
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="apellido">Apellido</label>
+    <input type="text" class="form-control" placeholder="Apellidos" id="apellido">
+  </div>
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="correo">Correo electronico</label>
+    <input type="email" class="form-control" placeholder="Correo electronico" id="correo">
+  </div>
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="telefono">Telefono</label>
+    <input type="text" class="form-control" placeholder="Telefono" id="telefono">
+  </div>
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="departamento">Departamento</label>
+    <select name="" id="departamento" class="form-control">
+      <option value="">Departamento</option>
+      <option value="">Valle</option>
+      <option value="">Cauca</option>
+      <option value="">Nariño</option>
+      <option value="">Choco</option>
+    </select>
+  </div>
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="municipio">Municipio</label>
+    <select name="" id="municipio" class="form-control">
+      <option value="">Departamento</option>
+      <option value="">Valle</option>
+      <option value="">Cauca</option>
+      <option value="">Nariño</option>
+      <option value="">Choco</option>
+    </select>
+  </div>
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="direccion">Dirección</label>
+    <input type="text" id="direccion" class="form-control" placeholder="Dirección">
+  </div>
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+    <label for="postal">Codigo postal</label>
+    <input type="text" id="postal" placeholder="Codigo postal" class="form-control">
+  </div>
+  <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="text-align: center;">
+    <input type="button"  class="btn btn-primary btn-seguir" value="Continuar" >
+
+  </div>
+</div>
+<script>
+ $(".btn-seguir").click(function(){
+  $("#formulario-reserva").load('datos-hotel-reservado.html');
+  $(".progress-bar").css("width","90%");
+  $('html, body').animate({
+ scrollTop: $(".breadcrumb").offset().top-50
+ }, 1000);
+});
+</script>

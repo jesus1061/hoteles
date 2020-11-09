@@ -1,0 +1,60 @@
+<div class="form-row">
+  <div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+  <label for="hotel">Hotel seleccionado</label>
+  <input type="text" class="form-control"  id="hotel" value="Hotel seleccionado" readonly>
+</div>
+<div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+  <label for="start">Numero de estrellas</label>
+  <input type="text" class="form-control" value="Numero de estrellas" id="start" readonly>
+</div>
+<div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+  <label for="location-hotel">Pais y Ciudad del hotel</label>
+  <input type="text" class="form-control" id="location-hotel" value="Pais y ciudad del hotel" readonly>
+</div>
+<div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+  <label for="telefono">Telefono</label>
+  <input type="text" class="form-control" placeholder="Telefono" id="telefono" value="01800350350" readonly>
+</div>
+<div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+  <label for="pago">Seleccione metodo de pago</label>
+  <select name="" id="pago" class="form-control">
+    <option value="">Metodo de pago</option>
+    <option value="">Tajeta de credito</option>
+    <option value="">Tarjeta debito</option>
+    <option value="">Tarjeta VIP</option>
+    
+  </select>
+</div>
+<div class="form-group col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+  <label for="sucursal">Sucursal bancaria</label>
+  <select name="" id="sucursal" class="form-control">
+    <option value="">Sucursal</option>
+    <option value="">BBVA</option>
+    <option value="">Bancolombia</option>
+    <option value="">Av/villas</option>
+    <option value="">Banco de bogota</option>
+  </select>
+</div>
+
+<div class="form-group col-xl-6 col-lg-6 col-md-4 col-sm-6 col-12">
+  <label for="postal">Numero de cuenta</label>
+  <input type="password" id="postal" placeholder="# cuenta bancaria" class="form-control">
+</div>
+<div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="text-align: center;">
+  <input type="button"  class="btn btn-primary btn-seguir" value="Terminar reservación" >
+  
+</div>
+</div>
+<script>
+   $(".btn-seguir").click(function(){
+    $('html, body').animate({
+ scrollTop: $(".status-reserva").offset().top-50
+ }, 1000);
+    $("input").attr("readonly","on");
+    $("select").attr("disabled","disabled");
+$(".progress-bar").css("width","100%");
+$(".status-reserva").css("display","block");
+
+setTimeout(function(){ window.location.href = 'index.html'; }, 3000);
+    });
+</script>

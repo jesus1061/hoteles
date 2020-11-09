@@ -196,3 +196,13 @@ form , iframe{
 		position: relative;
 		top: 2px;
 	}
+	.badge-light{
+		background-color: #7b1fa2;
+		color:white;
+		font-weight: 900;
+		font-style: oblique;
+	}
+	select{
+		cursor:pointer;
+	}
+	
