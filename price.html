@@ -64,8 +64,26 @@
       </nav>
       <hr>
     </div>
+    <div class="col-xl-12" style="margin: auto; border-bottom: dashed 1px gray;">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#compara" id="tab-comparar" data-toggle="pill" role="tab" aria-controls="compara" aria-selected="true">Compara</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tarjetas" id="tab-tarjetas" data-toggle="pill" role="tab" aria-controls="tarjetas" aria-selected="false">Tarjetas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#comentarios" id="tab-comentarios" data-toggle="pill" role="tab" aria-controls="comentarios" aria-selected="false">Comentarios</a>
+        </li>
+       
+      </ul>
+      
+    </div>
 
-    <div class="col-xl-12 " >
+
+    <div class="tab-content col-xl-12" style="padding-left: 0; padding-right: 0; padding-top: 10px; padding-bottom: 10px;">
+      <div class="tab-pane fade show active" id="compara" role="tabpanel" aria-labelledby="compara-tab">
+        <div class="col-xl-12" >
 
       <div class="table-responsive">
         <table class="table table-striped">
@@ -154,12 +172,10 @@
       </div>
 
     </div>
-    
+      </div>
 
-  </div>
 
-<hr>
-
+<div class="tab-pane fade" role="tabpanel" aria-labellebdy="tarjetas-tab" id="tarjetas">
   <div class="d-flex justify-content-center">
     <div class="card" >
       <div class="card-header" style="background-color:rgba(0,56,147,1); color:white">
@@ -167,15 +183,35 @@
         
       </div>
       <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tarjeta de Credito</li>
-          <li class="list-group-item">Tarjeta de Debito</li>
-          <li class="list-group-item">Tarjeta VIP</li>
-        </ul>
+        <li class="list-group-item">Tarjeta de Credito</li>
+        <li class="list-group-item">Tarjeta de Debito</li>
+        <li class="list-group-item">Tarjeta VIP</li>
+      </ul>
       
     </div>
     
 
   </div>
+</div>
+<div class="tab-pane fade" id="comentarios" role="tabpanel" aria-labellebdy="comentarios-tab">
+
+  <div class="col-xl-12" style="text-align: center;">
+    <br>
+    <span>No hay comentarios</span>
+  </div>
+  
+</div>
+
+    </div>
+
+    
+    
+
+  </div>
+
+  <hr>
+
+  
 </div>
 
 <footer id="footer">
