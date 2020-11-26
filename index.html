@@ -168,7 +168,7 @@
 
       </div>
 
-      <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+      <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-1">Contacto</button></center>
 
     </div>
 
@@ -217,7 +217,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-2">Contacto</button></center>
 
 </div>
 </div>
@@ -264,7 +264,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-3">Contacto</button></center>
 
 </div>
 </div>
@@ -311,7 +311,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-4">Contacto</button></center>
 
 </div>
 </div>
@@ -357,7 +357,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-5">Contacto</button></center>
 
 </div>
 </div>
@@ -403,7 +403,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-6">Contacto</button></center>
 
 </div>
 </div>
@@ -449,7 +449,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-7">Contacto</button></center>
 
 </div>
 </div>
@@ -495,7 +495,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-8">Contacto</button></center>
 
 </div>
 </div>
@@ -541,7 +541,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-9">Contacto</button></center>
 
 </div>
 </div>
@@ -587,7 +587,7 @@
 
   </div>
 
-  <center>  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-contact" id="contactoBtn">Contacto</button></center>
+  <center>  <button type="button" class="btn btn-outline-success contact" data-toggle="modal" data-target="#modal-contact" id="btn-contacto-10">Contacto</button></center>
 
 </div>
 </div>
@@ -693,6 +693,11 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>  
   $(function () {
+    var id;
+    $(".contact").click(function(){
+      id = $(this).attr("id");
+      //alert(id);
+    });
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
 
@@ -701,23 +706,33 @@
     });
 
     $('#modal-contact').on('show.bs.modal', function (e) {
+
+
       console.log("La ventana modal se esta activando");
-      $("#contactoBtn").removeClass("btn-outline-success");
-      $("#contactoBtn").addClass("btn-primary");
-      
-      $("#contactoBtn").prop("disabled",true);
-      
-      
+      var elemento = document.getElementById(id);
+      var id_convertido = "#"+id+"";
+      $(""+id_convertido+"").removeClass("btn-outline-success");
+      $(""+id_convertido+"").addClass("btn-primary");
+      $(""+id_convertido+"").prop("disabled",true);
+
+
 
     })
 
     $('#modal-contact').on('shown.bs.modal', function (e) {
+
+
+      console.log("el boton que se activado es"+id);
       console.log("La ventana modal se activo");
+
     })
 
     $("#modal-contact").on('hide.bs.modal' , function(e){
+      var elemento2 = document.getElementById(id);
+      var id_convertido2 = "#"+id+"";
       console.log("la modal se esta ocultando");
-      $("#contactoBtn").prop("disabled",false);
+      $(""+id_convertido2+"").prop("disabled",false);
+
 
     });
 
